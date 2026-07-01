@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Azeneth ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+min-height:100vh;
+overflow-x:hidden;
+color:#fff;
+text-align:center;
+background: linear-gradient(-45deg,#ffd6e0,#ffc2d1,#cdb4db,#a2d2ff);
+background-size:400% 400%;
+animation: bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.container{
+padding:40px 18px;
+max-width:800px;
+margin:auto;
+animation: fade 1.5s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+font-size:38px;
+margin-bottom:20px;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:18px;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:20px;
+border-radius:20px;
+margin:15px 0;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+button{
+padding:14px 28px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+margin:10px;
+}
+
+#yes{
+background:#fff;
+color:#ff4d6d;
+}
+
+#yes:hover{
+transform:scale(1.1);
+}
+
+#no{
+background:#ff4d6d;
+color:#fff;
+position:absolute;
+}
+
+#final{
+display:none;
+margin-top:30px;
+animation: fade 1.5s ease;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+font-size:22px;
+animation: fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+.float{
+position:fixed;
+font-size:26px;
+opacity:0.25;
+animation: floatUp 10s linear infinite;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
+}
+
+.small{
+font-size:15px;
+opacity:0.9;
+}
+
+#typing{
+font-size:22px;
+margin-bottom:20px;
+border-right:2px solid white;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation: typing 4s steps(30,end) forwards;
+}
+
+@keyframes typing{
+from{width:0;}
+to{width:100%;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- floating teddy & stitch vibes -->
+<div class="float" style="left:10%;">🧸</div>
+<div class="float" style="left:80%; animation-delay:2s;">💙</div>
+<div class="float" style="left:50%; animation-delay:4s;">🧸</div>
+
+<div class="container">
+
+<div id="typing">Azeneth...</div>
+
+<h1>For Azeneth ❤️</h1>
+
+<div class="card">
+<p>
+I’ve been trying to find the right way to say this…<br><br>
+
+You are one of the most beautiful people I’ve ever met — not just in the way you look, but in the way you exist.
+</p>
+</div>
+
+<div class="card">
+<p>
+You are funny without trying.<br>
+You are smart in a way that amazes me.<br>
+You care deeply, even when you don’t realize it.
+</p>
+</div>
+
+<div class="card">
+<p>
+You always support me, even when I don’t deserve it.<br>
+You believe in me when I struggle to believe in myself.<br><br>
+
+And I never take that for granted.
+</p>
+</div>
+
+<div class="card">
+<p>
+We share something soft and rare… like teddy bears and Stitch moments that feel like home 🧸💙
+</p>
+</div>
+
+<div class="card">
+<p>
+So I just want to ask you something important.
+</p>
+
+<h1>Will you make me the luckiest man and be my beautiful and loving girlfriend?</h1>
+
+<p class="small">(take your time…)</p>
+
+<button id="yes">Yes ❤️</button>
+<button id="no">No</button>
+
+<div id="final">
+<h1>❤️</h1>
+<p>
+Thank you…<br><br>
+
+I’ll always be there for you.<br>
+Through everything — the good, the bad, and everything in between.<br><br>
+
+You mean more to me than words can say, Azeneth.
+</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const noBtn=document.getElementById("no");
+const yesBtn=document.getElementById("yes");
+const final=document.getElementById("final");
+
+noBtn.addEventListener("mouseover",()=>{
+noBtn.style.left=Math.random()*80+"vw";
+noBtn.style.top=Math.random()*80+"vh";
+});
+
+yesBtn.addEventListener("click",()=>{
+
+final.style.display="block";
+
+for(let i=0;i<120;i++){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(2+Math.random()*3)+"s";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),5000);
+}
+
+});
+
+</script>
+
+</body>
+</html>
